@@ -51,3 +51,6 @@ _site
 secrets.json
 .jekyll-metadata
 .ruby-version
+.swo
+.swp
+.swn

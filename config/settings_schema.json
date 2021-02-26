@@ -9,6 +9,115 @@
   },
   {
     "name": {
+      "en": "Hero"
+    },
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "hero_image",
+        "label": {
+          "en": "Image"
+        }
+      },
+      {
+        "type": "image_picker",
+        "id": "hero_mobile_image",
+        "label": {
+          "en": "Mobile Image"
+        }
+      },
+      {
+        "type": "color",
+        "id": "hero_color",
+        "label": {
+          "en": "Color Picker"
+        }
+      },
+      {
+        "type": "select",
+        "id": "hero_alignment",
+        "label": {
+          "en": "Text Alignment"
+        },
+        "options": [
+          {
+            "value": "left",
+            "label": {
+              "en": "Left"
+            }
+          },
+          {
+            "value": "right",
+            "label": {
+              "en": "Right"
+            }
+          },
+          {
+            "value": "center",
+            "label": {
+              "en": "Center"
+            }
+          }
+        ],
+        "default": "center"
+      },
+      {
+        "type": "text",
+        "id": "hero_title",
+        "label": {
+          "en": "Title"
+        },
+        "default": "Title"
+      },
+      {
+        "type": "textarea",
+        "id": "hero_text",
+        "label": {
+          "en": "Copy"
+        }
+      },
+      {
+        "type": "text",
+        "id": "hero_button_label",
+        "label": {
+          "en": "CTA Text"
+        }
+      },
+      {
+        "type": "url",
+        "id": "hero_button_link",
+        "label": {
+          "en": "CTA URL"
+        }
+      },
+      {
+         "type": "font_picker",
+         "id": "hero_header_font",
+         "label": {
+           "en": "Header font"
+         },
+         "default": "roboto_n7"
+      },
+      {
+         "type": "font_picker",
+         "id": "hero_text_font",
+         "label": {
+           "en": "Text font"
+         },
+         "default": "roboto_n3"
+      },
+      {
+         "type": "font_picker",
+         "id": "hero_cta_font",
+         "label": {
+           "en": "CTA font"
+         },
+         "default": "roboto_n3"
+      }    
+    ]
+  },
+  {
+    "name": {
       "da": "Farver",
       "de": "Farben",
       "en": "Colors",

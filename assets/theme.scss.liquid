@@ -8715,69 +8715,78 @@ $min-height-disclosure: 92px;
 {{ settings.hero_text_font | font_face }}
 {{ settings.hero_cta_font | font_face }}
 
-.hero-content {
-
-  color: {{ settings.hero_color }};
-  text-align: left;
-  max-width: 40%;
-  margin: 0;
-
-  &.align-left {
-    margin-left: 6%;
-  }
-
-  &.align-right {
-    margin-left: 50%;
-  }
-
-  &.align-center {
-    margin: 0 auto;
-    max-width: 70%;
-    text-align: center;
-  }
-
+.hero {
+  
   @media screen and (max-width: 480px) {
-    &.align-left,
-    &.align-right,
+    background-image: url('{{ settings.hero_mobile_image | img_url: '480x' }}') !important;
+  }
+
+  .hero-content {
+
+    color: {{ settings.hero_color }};
+    text-align: left;
+    max-width: 40%;
+    margin: 0;
+
+    &.align-left {
+      margin-left: 6%;
+    }
+
+    &.align-right {
+      margin-left: 50%;
+    }
+
     &.align-center {
       margin: 0 auto;
-      max-width: 55%;
+      max-width: 70%;
       text-align: center;
     }
-  }  
 
-  .mega-title {
-    margin-bottom: 8px;
-    font-family: {{ settings.hero_header_font.family }}, {{ settings.hero_header_font.fallback_families }};
-    font-weight: 700;
-    font-size: 46px;
     @media screen and (max-width: 480px) {
-      font-size: 36px;
+      &.align-left,
+      &.align-right,
+      &.align-center {
+        margin: 0 auto;
+        max-width: 55%;
+        text-align: center;
+      }
+    }  
+
+    .mega-title {
+      margin-bottom: 8px;
+      font-family: {{ settings.hero_header_font.family }}, {{ settings.hero_header_font.fallback_families }};
+      font-weight: 700;
+      font-size: 46px;
+      @media screen and (max-width: 480px) {
+        font-size: 36px;
+      }
     }
+
+    .mega-subtitle {
+      font-family: {{ settings.hero_text_font.family }}, {{ settings.hero_text_font.fallback_families }};
+      font-weight: 300;
+      font-size: 24px;
+      @media screen and (max-width: 480px) {
+        font-size: 18px;
+      }
+    }
+
+    a.hero__btn {
+      font-family: {{ settings.hero_cta_font.family }}, {{ settings.hero_cta_font.fallback_families }};
+      font-weight: 300;
+      font-size: 20px;
+      letter-spacing: 0.3px;
+      color: {{ settings.hero_color }};
+      background-color: #57AD68;
+      border-radius: 30px;
+      padding: 10px 40px;
+      &:hover {
+        color: #57AD68;
+        background-color: {{ settings.hero_color }};
+      }
+    }
+
   }
 
-  .mega-subtitle {
-    font-family: {{ settings.hero_text_font.family }}, {{ settings.hero_text_font.fallback_families }};
-    font-weight: 300;
-    font-size: 24px;
-    @media screen and (max-width: 480px) {
-      font-size: 18px;
-    }
-  }
+} 
 
-  a.hero__btn {
-    font-family: {{ settings.hero_cta_font.family }}, {{ settings.hero_cta_font.fallback_families }};
-    font-weight: 300;
-    font-size: 20px;
-    letter-spacing: 0.3px;
-    color: {{ settings.hero_color }};
-    background-color: #57AD68;
-    border-radius: 30px;
-    padding: 10px 40px;
-    &:hover {
-      color: #57AD68;
-      background-color: {{ settings.hero_color }};
-    }
-  }
-
-}
